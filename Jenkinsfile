@@ -53,7 +53,7 @@ pipeline
                  script {
                      try {
         //                 bat "chcp 65001\n vrunner vanessa"
-						   bat "chcp 65001\nC:\\Program Files\\1cv8\\8.3.25.1520\\bin\\1cv8c" //N "admin" //TestManager //Execute "D:\\Program Files\\OneScript\\lib\\vanessa-automation\vanessa-automation.epf" /IBConnectionString "File=""D:\\1Ctemplates\\testmanager"";" //C"StartFeaturePlayer;QuietInstallVanessaExt;VAParams=D:\\1Ctemplates\\vantest\VAParams.json"
+						   bat "chcp 65001\nC:\\Program Files\\1cv8\\8.3.25.1520\\bin\\1cv8c.exe" //N "admin" //TestManager //Execute "D:\\Program Files\\OneScript\\lib\\vanessa-automation\vanessa-automation.epf" /IBConnectionString "File=""D:\\1Ctemplates\\testmanager"";" //C"StartFeaturePlayer;QuietInstallVanessaExt;VAParams=D:\\1Ctemplates\\vantest\VAParams.json"
 						 }
                      catch(Exception Exc) {
                          currentBuild.result = 'UNSTABLE'
