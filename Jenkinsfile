@@ -28,7 +28,7 @@ pipeline
     
          stage("Build test base") {
              steps {                
-                 bat "chcp 866\n vrunner init-dev --dt D:\\jenkins\\template\\dev.dt --src D:\\jenkins\\jenkins_repo\\src"
+                 bat 'chcp866\\vrunner init-dev --dt D:\\jenkins\\template\\dev.dt --src D:\\jenkins\\jenkins_repo\\src'
              }
          }       
 //         stage("Syntax check") {
