@@ -28,7 +28,7 @@ pipeline
          stage("Sync local repo form gitgub") {
              steps {                
 //                 bat 'rmdir /s /q "D:\\\\1Ctemplates\\\\jenkins-repo'
-				 bat '''cd /d D:\\\\1Ctemplates
+				 bat '''cd /d D:\\\\1Ctemplates\\\\jenkins-repo
                      git fetch --all'''
              }
          }
