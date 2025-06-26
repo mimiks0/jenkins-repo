@@ -36,13 +36,13 @@ pipeline
     
          stage("Build test base") {
              steps {                
-//                 bat 'chcp 866\n vrunner init-dev --dt D:\\jenkins\\template\\dev.dt --src D:\\jenkins\\jenkins_repo\\src'
+//                 bat 'chcp 65001\n vrunner init-dev --dt D:\\jenkins\\template\\dev.dt --src D:\\jenkins\\jenkins_repo\\src'
 
-				 bat '''chcp 866&"C:\\Program Files\\1cv8\\8.3.25.1520\\bin\\ibcmd" infobase restore --db-path="D:\\1Ctemplates\\dev" D:\\1Ctemplates\\jenkins-repo\\template\\dev.dt" --user="Администратор"
+				 bat '''chcp 65001&"C:\\Program Files\\1cv8\\8.3.25.1520\\bin\\ibcmd" infobase restore --db-path="D:\\1Ctemplates\\dev" "D:\\1Ctemplates\\jenkins-repo\\template\\dev.dt" --user="Администратор"
 
-                 chcp 866&"C:\\Program Files\\1cv8\\8.3.25.1520\\bin\\ibcmd" infobase config import --db-path="D:\\1Ctemplates\\dev"  "D:\\1Ctemplates\\jenkins-repo\\src" --user="Администратор"
+                 chcp 65001&"C:\\Program Files\\1cv8\\8.3.25.1520\\bin\\ibcmd" infobase config import --db-path="D:\\1Ctemplates\\dev"  "D:\\1Ctemplates\\jenkins-repo\\src" --user="Администратор"
 
-                 chcp 866&"C:\\Program Files\\1cv8\\8.3.25.1520\\bin\\ibcmd" infobase config apply   --db-path="D:\\1Ctemplates\\dev" --user="Администратор" --force'''
+                 chcp 65001&"C:\\Program Files\\1cv8\\8.3.25.1520\\bin\\ibcmd" infobase config apply   --db-path="D:\\1Ctemplates\\dev" --user="Администратор" --force'''
              }
          }       
          stage("Smoke tests") {
