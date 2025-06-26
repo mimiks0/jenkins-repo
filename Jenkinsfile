@@ -70,15 +70,15 @@ pipeline
                  }                
              }
          } 
-        stage("Sonar") {
-           steps {
-               script {
-                   scannerHome = tool 'sonar-scanner'
-               }
-               withSonarQubeEnv("sonar") {
-                   bat "chcp 65001\n ${scannerHome}/bin/sonar-scanner -D sonar.login=sqp_ff1f8486e5db41bcca28e81970a89395690440a4"
-               }                
-            }
-         } 
+//        stage("Sonar") {
+//           steps {
+//               script {
+//                   scannerHome = tool 'sonar-scanner'
+//               }
+//               withSonarQubeEnv("sonar") {
+//                   bat "chcp 65001\n ${scannerHome}/bin/sonar-scanner -D sonar.login=sqp_ff1f8486e5db41bcca28e81970a89395690440a4"
+//               }                
+//            }
+//         } 
     }
 }
