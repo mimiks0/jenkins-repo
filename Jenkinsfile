@@ -76,7 +76,7 @@ pipeline
                     scannerHome = tool 'sonar-scanner'
                 }
                 withSonarQubeEnv("sonar") {
-                    bat "chcp 65001\n ${scannerHome}/sonar-scanner -D "sonar.token=sqp_6b9737b082b6e223cf015aeb6144590b0944f2ce"
+                    bat "chcp 65001\n ${scannerHome}/sonar-scanner -D sonar.token=sqp_6b9737b082b6e223cf015aeb6144590b0944f2ce"
                 }                
             }
          } 
