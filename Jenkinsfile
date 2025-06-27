@@ -70,15 +70,16 @@ pipeline
                  }                
              }
          } 
-//        stage("Sonar") {
-//           steps {
-//               script {
-//                   scannerHome = tool 'sonar-scanner'
-//               }
-//               withSonarQubeEnv("sonar") {
-//                   bat "chcp 65001\n ${scannerHome}/bin/sonar-scanner -D sonar.login=sqp_ff1f8486e5db41bcca28e81970a89395690440a4"
-//               }                
-//            }
-//         } 
+        stage("Sonar") {
+           steps {
+              script {
+                   
+
+                   bat '''cd /d D:\\1Ctemplates\\jenkins-repo\\src
+                   chcp 65001&sonar-scanner.bat -D"sonar.projectKey=Ci_Code" -D"sonar.sources=." -D"sonar.host.url=http://192.168.1.35:9000" -D"sonar.token=sqp_6b9737b082b6e223cf015aeb6144590b0944f2ce""'''
+				   
+               }                
+            }
+         } 
     }
 }
