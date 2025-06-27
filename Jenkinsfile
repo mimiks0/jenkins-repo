@@ -76,8 +76,7 @@ pipeline
                    
 
                    bat '''cd /d D:\\1Ctemplates\\jenkins-repo\\src
-                   chcp 65001&"D:\sonar-scanner\bin\sonar-scanner.bat" -D"sonar.projectKey=Ci_Code" -D"sonar.sources=." -D"sonar.host.url=http://192.168.1.35:9000" -D"sonar.token=sqp_6b9737b082b6e223cf015aeb6144590b0944f2ce""'''
-				   
+                          sonar-scanner.bat -D"sonar.projectKey=Ci_Code" -D"sonar.sources=." -D"sonar.host.url=http://192.168.1.35:9000" -D"sonar.token=sqp_6b9737b082b6e223cf015aeb6144590b0944f2ce"'''
                }                
             }
          } 
